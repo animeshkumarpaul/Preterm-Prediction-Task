@@ -2502,6 +2502,7 @@ feature_importances
 
 
 # In[86]:
+###### VALIDATION PART #####################
 
 
 import matplotlib.pyplot as plt
