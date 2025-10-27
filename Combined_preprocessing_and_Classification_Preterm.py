@@ -28,6 +28,21 @@ pd.set_option('display.max_rows', 50)
 pd.set_option('display.max_columns', None)
 
 
+
+
+# Only load whatever you need - otherwise there will be memory issue.
+pickle_path = '/data/padmalab/preg/data/processed/req04417_pin_2008_1819_m.pkl'
+pin = load_path_obj(pickle_path)
+pickle_path = '/data/padmalab/preg/data/processed/req04417_amb_0203_1819_m.pkl'
+amb = load_path_obj(pickle_path)
+pickle_path = '/data/padmalab/preg/data/processed/req04417_inp_0203_1819_m.pkl'
+inp = load_path_obj(pickle_path)
+pickle_path = '/data/padmalab/preg/data/processed/req04417_clm_0203_1819_m.pkl'
+clm = load_path_obj(pickle_path)
+pickle_path = '/data/padmalab/preg/data/processed/req04417_nob_2006_2018.pkl'
+nob = load_path_obj(pickle_path)
+
+
 # # Filtering
 
 # ## Filter by Missing Data & Migration
@@ -43,6 +58,7 @@ pop_reg = load_path_obj(pickle_path)
 
 pickle_path = '/data/padmalab/preg/data/processed/req04417_cohort.pkl'
 cohort = load_path_obj(pickle_path)
+
 
 
 # In[4]:
@@ -142,8 +158,7 @@ birth_registry = birth_registry_filtered_migration
 # In[36]:
 
 
-pickle_path = '/data/padmalab/preg/data/processed/req04417_pin_2008_1819_m.pkl'
-pin = load_path_obj(pickle_path)
+
 
 
 # In[38]:
@@ -252,8 +267,7 @@ pin_1year = pin_filter_by_Birth_Mother_ID_BEFORE_CONCEPTION_DATE #load_path_obj(
 # In[48]:
 
 
-pickle_path = '/data/padmalab/preg/data/processed/req04417_amb_0203_1819_m.pkl'
-amb = load_path_obj(pickle_path)
+
 
 
 # ### 26 weeks
@@ -338,8 +352,6 @@ with tqdm(total=Unique_mother_id_1.shape[0]) as pbar:
 # In[54]:
 
 
-pickle_path = '/data/padmalab/preg/data/processed/req04417_inp_0203_1819_m.pkl'
-inp = load_path_obj(pickle_path)
 
 
 # In[55]:
@@ -406,8 +418,6 @@ with tqdm(total=Unique_mother_id_1.shape[0]) as pbar:
 # In[60]:
 
 
-pickle_path = '/data/padmalab/preg/data/processed/req04417_clm_0203_1819_m.pkl'
-clm = load_path_obj(pickle_path)
 
 
 # ### 1 Year
@@ -491,8 +501,6 @@ with tqdm(total=Unique_mother_id_1.shape[0]) as pbar:
 # In[67]:
 
 
-pickle_path = '/data/padmalab/preg/data/processed/req04417_nob_2006_2018.pkl'
-nob = load_path_obj(pickle_path)
 
 
 # In[68]:
